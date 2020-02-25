@@ -573,9 +573,9 @@ class Media extends AbstractModel
                 }
                 break;
             case 'location':
-                $this->locationId = $arr[$prop]['id'] ? $arr[$prop]['id'] : null;
-                $this->locationName = $arr[$prop]['name'] ? $arr[$prop]['name'] : null;
-                $this->locationSlug = $arr[$prop]['slug'] ? $arr[$prop]['slug'] : null;
+                $this->locationId = isset($arr[$prop]['id']) ? $arr[$prop]['id'] : null;
+                $this->locationName = isset($arr[$prop]['name']) ? $arr[$prop]['name'] : null;
+                $this->locationSlug = isset($arr[$prop]['slug']) ? $arr[$prop]['slug'] : null;
                 $this->locationAddressJson = isset($arr[$prop]['address_json']) ? $arr[$prop]['address_json'] : null;
                 break;
             case 'user':
